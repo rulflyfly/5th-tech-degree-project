@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.wrapper {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    margin: 3em auto;
+    padding: .5em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+img {
+    width: 40vw;
+    margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+    input {
+        width: 60%;
+        padding: 1rem;
+    }
+
+    img {
+        width: 27vw;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .wrapper {
+        max-width: 70rem;
+    }
+
+    img {
+        width: 15rem;
+        margin: 1rem .5rem;
+    }
+}
