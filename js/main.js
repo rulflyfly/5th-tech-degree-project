@@ -60,7 +60,9 @@ $('.photos a').each(function(i) {
     $(this).attr('data-title', `${captions[i].name}. ${captions[i].caption}`);
  })
 
- 
+ $('.photos img').each(function(i){
+    $(this).attr('alt', `${captions[i].name}. ${captions[i].caption}`);
+ })
 
 $('input').on('keyup', function(){
     const value = $(this).val().toLowerCase();
