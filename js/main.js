@@ -47,30 +47,25 @@ const captions = [
         name: 'Bluebells',
         caption: 'I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.'
     }
-]
+];
 
 lightbox.option({
     'showImageNumberLabel': false
-  })
-
+  });
 
 
 $('.photos a').each(function(i) {
     $(this).attr('data-lightbox', 'roadtrip');
     $(this).attr('data-title', `${captions[i].name}. ${captions[i].caption}`);
- })
-
- $('.photos img').each(function(i){
-    $(this).attr('alt', `${captions[i].name}. ${captions[i].caption}`);
- })
+ });
 
 $('input').on('keyup', function(){
     const value = $(this).val().toLowerCase();
     $('.photos a').filter(function() {
         const $cap = $(this).attr('data-title').toLowerCase();
         $(this).toggle($cap.indexOf(value) !== -1);
-    })
-})
+    });
+});
 
 
  
